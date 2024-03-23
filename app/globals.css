@@ -16,17 +16,17 @@
   }
 
   .newsletter-form {
-    --primary: #8c4ec2;
-    --primary-dark: #6b21a8;
-    --primary-darkest: #3b0764;
+    --primary: #6366f1;
+    --primary-dark: rgb(14 165 233 / 0);
+    --primary-darkest: #10b981;
     --input-placeholder: #a6accd;
     --input-text: #646b8c;
     --border-default: #e1e6f9;
-    --border-active: #8c4ec2;
+    --border-active: #6366f1;
     --background: #fff;
     --button-text: #ffffff;
-    --success: #8c4ec2;
-    --trails: rgb(140, 78, 194, 0.15);
+    --success: #6366f1;
+    --trails: rgb(99 102 241 / 0.15);
   }
 
   .newsletter-form button {

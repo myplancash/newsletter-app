@@ -5,6 +5,7 @@ export const getTrailsKeyframes = (button: HTMLButtonElement) => {
     {
       "--text-opacity": 0,
       "--border-radius": "0px",
+      // getVar("--primary-dark", button),  is actually getting this valie rgb(14 165 233 / 0)
       "--left-wing-background": getVar("--primary-dark", button),
       "--right-wing-background": getVar("--primary-dark", button),
       duration: 0.1,

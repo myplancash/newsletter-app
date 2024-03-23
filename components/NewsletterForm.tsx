@@ -6,6 +6,7 @@ import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import { CheckIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import { gsap } from "gsap";
 import { FormEvent, useRef, useState } from "react";
+import { MembersSuccessResponse } from '../typings';
 
 function NewsletterForm() {
   const [input, setInput] = useState("");
@@ -62,8 +63,9 @@ function NewsletterForm() {
         onSubmit={handleSubmit}
         className="newsletter-form mt-10 animate-fade-in-3"
       >
-        <div className="group flex items-center gap-x-4 py-1 pl-4 pr-1 rounded-[9px] bg-[#090D11] hover:bg-[#15141B] shadow-outline-gray hover:shadow-transparent focus-within:bg-[#15141B] focus-within:!shadow-outline-gray-focus transition-all duration-300">
-          <EnvelopeIcon className="hidden sm:inline w-6 h-6 text-[#4B4C52] group-focus-within:text-white group-hover:text-white transition-colors duration-300" />
+        <div className="group flex items-center py-1 pl-4 pr-1 rounded-[9px] bg-[#090D11] hover:bg-[#15141B] shadow-outline-gray hover:shadow-transparent focus-within:bg-[#15141B] focus-within:!shadow-outline-gray-focus transition-all duration-300">
+          
+          <EnvelopeIcon className="hidden sm:inline w-6 h-6 sm:mr-3 text-[#4B4C52] group-focus-within:text-white group-hover:text-white transition-colors duration-300" />
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
@@ -98,7 +100,6 @@ function NewsletterForm() {
           </button>
         </div>
       </form>
-
       <div className="relative">
         {(successMessage || errorMessage) && (
           <div className="flex items-start space-x-2 bg-[#0A0E12] shadow-outline-gray text-white rounded-[9px] py-4 px-6 animate-fade-bottom absolute">

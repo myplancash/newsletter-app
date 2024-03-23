@@ -3,23 +3,28 @@ import { Metadata } from "next";
 export const socials = [
   {
     id: 1,
-    name: "Twitter",
-    url: "https://twitter.com/YenneferIlw",
-    handle: "@YenneferIlw",
+    name: "Github",
+    url: "https://github.com/myplancash",
+    handle: "myplancash",
   },
   {
     id: 2,
-    name: "Instagram",
-    url: "https://www.instagram.com/ilwyennefer",
-    handle: "ilwyennefer",
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/sergioestebantorres/",
+    handle: "sergioestebantorres",
+  },
+  {
+    id: 3,
+    name: "Twitter",
+    url: "https://twitter.com/keeprules",
+    handle: "@keeprules",
   },
 ];
 
-const title = "ILW Yennefer";
+const title = "Sergio Esteban Torres";
 const description =
-  "Full-Stack Software Engineer 🧑🏻‍💻 working with cutting-edge stuff.";
-const image =
-  "https://yt3.ggpht.com/VoEBu0KxtQkfWretx-3_NqxKnoLqfKNTtWq0KFigdqaqVQFz8CggKgqkcxXqCDW7zYWlZZJOuQ=s108-c-k-c0x00ffffff-no-rj";
+  "Highly skilled Full-Stack Software Engineer 🧑🏻‍💻 adept at harnessing the latest advancements in technology to create groundbreaking solutions.";
+const image = "/assets/images/profile.png"
 
 export const metaData: Metadata = {
   title: title,
@@ -27,8 +32,8 @@ export const metaData: Metadata = {
   openGraph: {
     title,
     description,
-    url: "https://ilwyennefer.com",
-    siteName: "ILW Yennefer",
+    url: "https://portfolio-website-ruddy-beta.vercel.app",
+    siteName: "Sergio Esteban Torres",
     images: [{ url: image }],
     locale: "en-US",
     type: "website",
@@ -49,6 +54,6 @@ export const metaData: Metadata = {
     description: description,
     card: "summary_large_image",
     images: [image],
-    creator: "@YenneferIlw",
+    creator: "@keeprules",
   },
 };
