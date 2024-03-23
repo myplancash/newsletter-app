@@ -6,7 +6,7 @@ import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import { CheckIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import { gsap } from "gsap";
 import { FormEvent, useRef, useState } from "react";
-import { MembersSuccessResponse } from '../typings';
+import { MembersSuccessResponse } from '../types';
 
 function NewsletterForm() {
   const [input, setInput] = useState("");
