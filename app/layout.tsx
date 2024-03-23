@@ -1,9 +1,14 @@
 import { metaData } from "@/constants";
-import { Inter } from "next/font/google";
+import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import { Metadata } from "next";
+import { cn } from "@/lib/utils";
 
-const inter = Inter({ subsets: ["latin"] });
+const IBMPlex = IBM_Plex_Sans({ 
+  subsets: ["latin"],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-ibm-plex'
+});
 
 export const metadata: Metadata = metaData;
 
@@ -14,7 +19,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        {/* Include meta tags from the metadata */}
+        <title>{metaData.title ? <>{metaData.title}</> : null}</title>
+        {metaData.description && <meta name="description" content={metaData.description} />}
+        {/* Include other meta tags as needed */}
+      </head>
+      <body className={cn("font-IBMPlex antialiased", IBMPlex.variable)}>
+        {children}
+      </body>
     </html>
   );
 }

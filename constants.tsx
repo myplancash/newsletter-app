@@ -19,16 +19,25 @@ export const socials = [
     url: "https://twitter.com/keeprules",
     handle: "@keeprules",
   },
+  {
+    id: 4,
+    name: "Instagram",
+    url: "https://www.instagram.com/sergio_estebitan",
+    handle: "@sergio_estebitan",
+  },
 ];
 
+// Define your metadata constant
 const title = "Sergio Esteban Torres";
 const description =
   "Highly skilled Full-Stack Software Engineer 🧑🏻‍💻 adept at harnessing the latest advancements in technology to create groundbreaking solutions.";
-const image = "/assets/images/profile.png"
+const image = "/assets/images/profile.png";
+const keywords = ["software engineer", "full-stack developer", "technology", "web development"];
 
 export const metaData: Metadata = {
   title: title,
   description: description,
+  keywords: keywords.join(", "),
   openGraph: {
     title,
     description,
@@ -50,8 +59,8 @@ export const metaData: Metadata = {
     },
   },
   twitter: {
-    title: title,
-    description: description,
+    title,
+    description,
     card: "summary_large_image",
     images: [image],
     creator: "@keeprules",
