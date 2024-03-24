@@ -17,7 +17,7 @@ export default function ListItem({ post }: Props) {
           {title}
         </Link>
         <br />
-        <p className="text-sm mt-1 text-gray-600 dark:text-gray-400">{formattedDate}</p>
+        <p className="text-md mt-1 text-gray-600 dark:text-gray-400">{formattedDate}</p>
       </li>
     );
 }
