@@ -61,7 +61,7 @@ function NewsletterForm() {
     <div className="flex flex-col space-y-8 md:w-[400px]">
       <form
         onSubmit={handleSubmit}
-        className="newsletter-form mt-10 animate-fade-in-3"
+        className="newsletter-form mt-10 animate-fadeIn"
       >
         <div className="group flex items-center py-1 pl-4 pr-1 rounded-[9px] bg-[#090D11] hover:bg-[#15141B] shadow-outline-gray hover:shadow-transparent focus-within:bg-[#15141B] focus-within:!shadow-outline-gray-focus transition-all duration-300">
           
@@ -102,7 +102,7 @@ function NewsletterForm() {
       </form>
       <div className="relative">
         {(successMessage || errorMessage) && (
-          <div className="flex items-start space-x-2 bg-[#0A0E12] shadow-outline-gray text-white rounded-[9px] py-4 px-6 animate-fade-bottom absolute">
+          <div className="flex items-start space-x-2 bg-[#0A0E12] shadow-outline-gray text-white rounded-[9px] py-4 px-6 animate-fadeBottom absolute">
             <div className="h-6 w-6 bg-[#1B2926] flex items-center justify-center rounded-full border border-[#273130] flex-shrink-0">
               <CheckIcon className="h-4 w-4 text-[#81A89A]" />
             </div>

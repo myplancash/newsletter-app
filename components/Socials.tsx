@@ -16,7 +16,7 @@ function Socials() {
         <div key={social.id} className="group">
           {isClient ? (
             <a href={social.url} target="_blank" rel="noopener noreferrer" className="block">
-              <div className="flex items-center justify-center animate-fade-in-3 cursor-pointer md:hover:shadow-outline-gray rounded-[9px] p-5 md:p-10 transition duration-200 ease-out">
+              <div className="flex items-center justify-center animate-fadeIn cursor-pointer md:hover:shadow-outline-gray rounded-[9px] p-5 md:p-10 transition duration-200 ease-out">
                 <SocialIcon
                   url={social.url}
                   label="my Social Networks"
@@ -31,7 +31,7 @@ function Socials() {
               </div>
             </a>
           ) : (
-            <div className="flex items-center justify-center animate-fade-in-3 cursor-pointer md:hover:shadow-outline-gray rounded-[9px] p-5 md:p-10 transition duration-200 ease-out">
+            <div className="flex items-center justify-center animate-fadeIn cursor-pointer md:hover:shadow-outline-gray rounded-[9px] p-5 md:p-10 transition duration-200 ease-out">
               <SocialIcon
                 url={social.url}
                 label="my Social Networks"

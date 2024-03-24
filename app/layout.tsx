@@ -2,7 +2,7 @@ import { metaData } from "@/constants";
 import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import { Metadata } from "next";
-import { cn } from "@/lib/utils";
+import Footer from "@/components/Footer";
 
 const IBMPlex = IBM_Plex_Sans({ 
   subsets: ["latin"],
@@ -20,13 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Include meta tags from the metadata */}
         <title>{metaData.title ? <>{metaData.title}</> : null}</title>
         {metaData.description && <meta name="description" content={metaData.description} />}
-        {/* Include other meta tags as needed */}
       </head>
-      <body className={cn("font-IBMPlex antialiased", IBMPlex.variable)}>
+      <body className={`${IBMPlex.variable} antialiased dark:bg-slate-800`}>
         {children}
+        <Footer/>
       </body>
     </html>
   );

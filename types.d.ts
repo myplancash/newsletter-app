@@ -76,3 +76,9 @@ export interface MembersSuccessResponse {
   tags_count: number;
   list_id: string;
 }
+
+export type BlogPost = {
+    id: string,
+    title: string,
+    date: string,
+}
