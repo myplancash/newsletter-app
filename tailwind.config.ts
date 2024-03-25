@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      FontFamily: {
+        sans: ['var(--font-ibm-plex)']
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -20,7 +23,7 @@ module.exports = {
       },
       animation: {
         fadeIn: "fadeIn 0.5s ease-in-out forwards",
-        titleFade: "titleFade 1s ease-out forwards",
+        titleFade: "titleFade 1s ease-in-out forwards",
         fadeBottom: "fadeBottom 1.5s ease-in-out forwards",
       },
       keyframes: {
@@ -30,12 +33,17 @@ module.exports = {
         },
         titleFade: {
           "0%": {
-            "line-height": "0%",
-            "letter-spacing": "0.25em",
+            transform: "scale(0.95)",
             opacity: "0",
           },
-          "80%": { opacity: "100%" },
-          "100%": { "line-height": "100%", opacity: "100%" },
+          "50%": {
+            transform: "scale(1.05)",
+            opacity: "0.8",
+          },
+          "100%": {
+            transform: "scale(1)",
+            opacity: "1",
+          },
         },
         fadeBottom: {
           "0%": { transform: "translateY(-100%)", opacity: "0%" },

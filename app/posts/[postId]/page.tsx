@@ -42,11 +42,11 @@ export default async function Post({ params }: { params: { postId: string } }) {
 
     return (
     <main className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-4">{title}</h1>
-        <p className="text-gray-600 mb-4">{pubDate}</p>
-        <article className="prose lg:prose-xl dark:prose-dark" dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        <h1 className="text-6xl font-bold mb-4">{title}</h1>
+        <p className="text-gray-600 mb-4 text-xl italic">{pubDate}</p>
+        <article className="prose lg:prose-xl dark:prose-dark font-normal" dangerouslySetInnerHTML={{ __html: contentHtml }} />
         <p className="mt-8">
-            <Link href="/" className="text-blue-500 hover:text-blue-700">← Back to home</Link>
+            <Link href="/" className="text-blue-500 text-3xl hover:underline hover:text-blue-700">← Back to home</Link>
         </p>
     </main>
     )
