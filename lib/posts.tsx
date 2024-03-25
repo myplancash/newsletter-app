@@ -48,14 +48,15 @@ export async function getPostData(id: string) {
 
     const contentHtml = processedContent.toString();
 
-    const blogPostWithHTML: BlogPost & { contentHtml: string } = {
+    // const images: Image[] = matterResult.data.images || [];
+
+    const blogPostWithHTML: BlogPost = {
         id,
         title: matterResult.data.title,
         author: matterResult.data.author,
         date: matterResult.data.date,
         contentHtml,
-    }
+    };
 
-    // Combine the data with the id
-    return blogPostWithHTML
+    return blogPostWithHTML;
 }

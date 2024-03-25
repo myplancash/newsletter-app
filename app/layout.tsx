@@ -1,21 +1,21 @@
 import { metaData } from "@/constants";
-import { Lora, Poppins } from "next/font/google";
+import { Montserrat, Barlow } from "next/font/google";
 import "./globals.css";
 import { Metadata } from "next";
 import Footer from "@/components/Footer";
 import Head from "next/head";
 
-export const poppins = Poppins({
+export const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['400', '900'],
   display: 'swap',
-  variable: '--font-poppins'
+  variable: '--font-montserrat'
 })
 
-const lora = Lora({ 
+const barlow = Barlow({ 
   subsets: ["latin"],
   style: ['normal', 'italic'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '700', '900'],
   variable: '--font-lora'
 });
 
@@ -32,7 +32,7 @@ export default function RootLayout({
         <title>{metaData.title ? <>{metaData.title}</> : null}</title>
         {metaData.description && <meta name="description" content={metaData.description} />}
       </Head>
-      <body className={`${lora.variable} font-sans antialiased dark:bg-slate-800`}>
+      <body className={`${barlow.variable} font-sans antialiased dark:bg-slate-800`}>
         {children} 
         <Footer/>
       </body>

@@ -4,6 +4,7 @@ author: 'Sergio Esteban Torres'
 date: '2024-03-10'
 ---
 
+
 ![Illustration](/assets/images/ai-data-gaps.png)
 
 🤖 As a Machine Learning/AI Engineer, I'm passionate about the power of data. However, the phrase "garbage in, garbage out" highlights a critical issue: the strength of our data-driven conclusions depends on the quality of our data.

@@ -77,9 +77,17 @@ export interface MembersSuccessResponse {
   list_id: string;
 }
 
+
 export type BlogPost = {
-    id: string,
-    title: string,
-    date: string,
-    author: string,
+    id: string;
+    title: string;
+    date: string;
+    author: string;
+    contentHtml?: string;
+    // images?: Image[];
 }
+
+/* export interface Image {
+  url: string;
+  alt: string;
+} */
