@@ -1,5 +1,6 @@
 ---
 title: 'Developing Habits for Personal Success'
+author: 'Maricel Xin Tirol'
 date: '2024-03-19'
 ---
 
@@ -39,4 +40,4 @@ Identifying and overcoming the resistances that prevent us from developing new h
 
 Ultimately, developing effective habits is a journey of self-discovery and discipline. By identifying the habits that propel us towards our goals and working to overcome the resistances that hold us back, we can create an environment conducive to our personal and professional growth. Let us remember that every small step in the right direction brings us closer to the life we desire.
 
-# Habits #Productivity #PersonalGrowth #Success #Discipline #WellBeing #SelfDiscovery #PersonalDevelopment #LinkedIn
+#Habits #Productivity #PersonalGrowth #Success #Discipline #WellBeing #SelfDiscovery #PersonalDevelopment #LinkedIn

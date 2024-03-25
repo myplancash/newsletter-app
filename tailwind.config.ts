@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       FontFamily: {
-        sans: ['var(--font-ibm-plex)']
+        sans: ['var(--font-poppins)']
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

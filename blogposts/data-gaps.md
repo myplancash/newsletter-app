@@ -1,5 +1,6 @@
 ---
 title: 'Bridging Data Gaps and Building a Data-Literate Future'
+author: 'Sergio Esteban Torres'
 date: '2024-03-10'
 ---
 
@@ -26,4 +27,4 @@ Historical reasons and media representations impact data participation. Examinin
 
 🌐 Conclusion: Embracing data literacy is pivotal for engineers, analysts, and decision-makers. It shapes a future where data gaps are closed, biases are addressed, and impactful decisions are made. Let's bridge the gaps together!
 
-# DataLiteracy #MachineLearning #AI #DataQuality #BiasInData #Statistics #DataVisualization #Numeracy #CausalAnalysis #JohnSnow #ChallengerDisaster #HealthcareData #WomenInScience #InformedDecisionMaking
+#DataLiteracy #MachineLearning #AI #DataQuality #BiasInData #Statistics #DataVisualization #Numeracy #CausalAnalysis #JohnSnow #ChallengerDisaster #HealthcareData #WomenInScience #InformedDecisionMaking

@@ -26,6 +26,7 @@ export function generateMetadata({ params }: { params: { postId: string } }) {
 
     return {
         title: post.title,
+        author: post.author,
     }
 }
 
@@ -36,17 +37,20 @@ export default async function Post({ params }: { params: { postId: string } }) {
 
     if (!posts.find(post => post.id === postId)) notFound()
 
-    const { title, date, contentHtml } = await getPostData(postId)
+    const { title, date, contentHtml, author} = await getPostData(postId)
 
     const pubDate = getFormattedDate(date)
 
     return (
     <main className="container mx-auto px-4 py-8">
         <h1 className="text-6xl font-bold mb-4">{title}</h1>
-        <p className="text-gray-600 mb-4 text-xl italic">{pubDate}</p>
+        <div className="flex flex-row justify-between gap-5 ">
+            <p className="text-gray-600 text-xl order-first">By {author}</p>
+            <p className="text-gray-600 text-xl order-last">{pubDate}</p>
+        </div>
         <article className="prose lg:prose-xl dark:prose-dark font-normal" dangerouslySetInnerHTML={{ __html: contentHtml }} />
         <p className="mt-8">
-            <Link href="/" className="text-blue-500 text-3xl hover:underline hover:text-blue-700">← Back to home</Link>
+            <Link href="/" className="text-blue-500 text-xl hover:underline hover:text-blue-700">← Back to home</Link>
         </p>
     </main>
     )

@@ -15,13 +15,13 @@ export default function Home() {
           Exclusive newsletter benefits!
         </h1>
       </div>
-      <div className="mt-8 md:mt-12">
+      <div className="mt-8 md:mt-10">
         <Posts />
       </div>
-      <div className="mt-8 md:mt-12">
+      <div className="mt-8 md:mt-10">
         <NewsletterForm />
       </div>
-      <div className="mt-8 md:mt-12">
+      <div className="mt-8 md:mt-10">
         <Socials />
       </div>
     </main>
