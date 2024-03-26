@@ -1,21 +1,14 @@
 import { metaData } from "@/constants";
-import { Montserrat, Barlow } from "next/font/google";
+import { Quicksand } from "next/font/google";
 import "./globals.css";
 import { Metadata } from "next";
 import Footer from "@/components/Footer";
 import Head from "next/head";
 
-export const montserrat = Montserrat({
-  subsets: ['latin'],
-  weight: ['400', '900'],
-  display: 'swap',
-  variable: '--font-montserrat'
-})
-
-const barlow = Barlow({ 
+const quicksand = Quicksand({ 
   subsets: ["latin"],
-  style: ['normal', 'italic'],
-  weight: ['400', '700', '900'],
+  style: ['normal'],
+  weight: ['400', '500', '700'],
   variable: '--font-lora'
 });
 
@@ -32,7 +25,7 @@ export default function RootLayout({
         <title>{metaData.title ? <>{metaData.title}</> : null}</title>
         {metaData.description && <meta name="description" content={metaData.description} />}
       </Head>
-      <body className={`${barlow.variable} font-sans antialiased dark:bg-slate-800`}>
+      <body className={`${quicksand.variable} font-sans antialiased dark:bg-slate-800`}>
         {children} 
         <Footer/>
       </body>
