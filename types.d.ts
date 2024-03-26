@@ -79,12 +79,11 @@ export interface MembersSuccessResponse {
 
 
 export type BlogPost = {
-    id: string;
-    title: string;
-    date: string;
-    author: string;
-    contentHtml?: string;
-    // images?: Image[];
+  id: string;
+  title: string;
+  date: string;
+  author: string;
+  contentHtml: string;
 }
 
 /* export interface Image {

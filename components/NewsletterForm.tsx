@@ -97,11 +97,11 @@ function NewsletterForm() {
         </div>
       </form>
       {(successMessage || errorMessage) && (
-        <div className="flex items-start space-x-2 bg-[#0A0E12] shadow-outline-gray text-white rounded-[9px] py-4 px-6 animate-fadeBottom mt-4 md:absolute md:top-0 md:right-0">
+        <div className="flex items-start space-x-2 bg-[#0A0E12] border-white shadow-outline-gray border-2 border-white-600 text-white rounded-[9px] py-4 px-6 animate-fadeBottom mt-4 md:absolute md:top-0 md:right-0">
           <div className="h-6 w-6 bg-[#1B2926] flex items-center justify-center rounded-full border border-[#273130] flex-shrink-0">
             <CheckIcon className="h-4 w-4 text-[#81A89A]" />
           </div>
-          <div className="text-xs sm:text-sm text-[#4B4C52]">
+          <div className="text-xs sm:text-sm text-[#fefefe]">
             {successMessage ? (
               <p>
                 We&apos;ve added{" "}

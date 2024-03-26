@@ -11,7 +11,7 @@ export default function Posts() {
                 {posts.map(post => (
                     <ListItem key={post.id} post={post} />
                 ))}
-            </ul>
+            </ul>  
         </section>
     );
 }

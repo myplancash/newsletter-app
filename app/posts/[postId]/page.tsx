@@ -42,7 +42,7 @@ export default async function Post({ params }: { params: { postId: string } }) {
     const pubDate = getFormattedDate(date)
 
     return (
-    <main className="container mx-auto px-4 py-8">
+    <main className="container mx-auto px-4 py-8 mb-4">
         <h1 className="text-6xl font-bold mb-4 prose-headings">{title}</h1>
         <div className="flex flex-row justify-between gap-5">
             <p className="text-gray-600 text-xl order-first prose-p">By {author}</p>

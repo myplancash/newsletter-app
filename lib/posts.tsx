@@ -26,6 +26,7 @@ export function getSortedPostsData() {
             title: matterResult.data.title,
             author: matterResult.data.author,
             date: matterResult.data.date,
+            
         }
 
         // Combine the data with the id
@@ -48,7 +49,11 @@ export async function getPostData(id: string) {
 
     const contentHtml = processedContent.toString();
 
-    // const images: Image[] = matterResult.data.images || [];
+    console.log("Content HTML:", contentHtml); 
+
+    if (!contentHtml) {
+        throw new Error("Content HTML is missing or empty.");
+    }
 
     const blogPostWithHTML: BlogPost = {
         id,
