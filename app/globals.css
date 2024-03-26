@@ -27,17 +27,40 @@ body {
     )
     rgb(var(--background-start-rgb));
   font-family: var(--font-quicksand);
-  font-weight: 400;
 }
 
 html {
   font-family: var(--font-quicksand);
-  font-weight: 400;
 }
 
 h1 {
   font-family: var(--font-quicksand);
-  font-weight: 700;
+}
+
+p,
+a,
+li,
+h2 {
+  font-family: var(--font-quicksand);
+  font-weight: 400; /* Increased font weight for better readability */
+  font-size: 1.3rem;
+  line-height: 1.6; /* Adjust line height for better readability */
+  margin-bottom: 1rem; /* Add margin to create spacing between elements */
+}
+
+a {
+  color: #e2e2e2;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: 1.8rem; /* Increase heading size for better hierarchy */
+  margin-top: 2rem; /* Add top margin to create space between headings */
+  margin-bottom: 1.5rem; /* Add bottom margin for better spacing */
 }
 
 @layer utilities {

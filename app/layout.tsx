@@ -7,9 +7,8 @@ import Head from "next/head";
 
 const quicksand = Quicksand({ 
   subsets: ["latin"],
-  style: ['normal'],
-  weight: ['400', '500', '700'],
-  variable: '--font-lora'
+  weight: ['500', '700'],
+  variable: '--font-quicksand'
 });
 
 export const metadata: Metadata = metaData;
