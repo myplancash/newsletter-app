@@ -1,42 +1,43 @@
+import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
-import { promises as fs } from 'fs'
 import { BlogPost } from '@/types'
 
 const postsDirectory = path.join(process.cwd(), 'blogposts')
 
-export async function getSortedPostsData() {
-    const fileNames = await fs.readdir(postsDirectory);
-    const allPostsData = await Promise.all(fileNames.map(async (fileName) => {
+export function getSortedPostsData() {
+    // Get file names under /posts
+    const fileNames = fs.readdirSync(postsDirectory);
+    const allPostsData = fileNames.map((fileName) => {
+        // Remove ".md" from file name to get id
         const id = fileName.replace(/\.md$/, '');
+
+        // Read markdown file as string
         const fullPath = path.join(postsDirectory, fileName);
-        const fileContents = await fs.readFile(fullPath, 'utf8');
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
+
+        // Use gray-matter to parse the post metadata section
         const matterResult = matter(fileContents);
-        
-        // Fetch contentHtml asynchronously
-        const processedContent = await remark().use(html).process(matterResult.content);
-        const contentHtml = processedContent.toString();
 
         const blogPost: BlogPost = {
             id,
             title: matterResult.data.title,
-            author: matterResult.data.author,
             date: matterResult.data.date,
-            contentHtml,
-        };
+            author: matterResult.data.author, 
+        }
 
-        return blogPost;
-    }));
-
-    return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
+        // Combine the data with the id
+        return blogPost
+    });
+    // Sort posts by date
+    return allPostsData.sort((a, b) => a.date < b.date ? 1 : -1);
 }
-
 
 export async function getPostData(id: string) {
     const fullPath = path.join(postsDirectory, `${id}.md`);
-    const fileContents = await fs.readFile(fullPath, 'utf8');
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
 
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
@@ -47,19 +48,14 @@ export async function getPostData(id: string) {
 
     const contentHtml = processedContent.toString();
 
-    console.log("Content HTML:", contentHtml); 
-
-    if (!contentHtml) {
-        throw new Error("Content HTML is missing or empty.");
-    }
-
-    const blogPostWithHTML: BlogPost = {
+    const blogPostWithHTML: BlogPost & { contentHtml: string } = {
         id,
         title: matterResult.data.title,
-        author: matterResult.data.author,
         date: matterResult.data.date,
+        author: matterResult.data.author,
         contentHtml,
-    };
+    }
 
-    return blogPostWithHTML;
+    // Combine the data with the id
+    return blogPostWithHTML
 }

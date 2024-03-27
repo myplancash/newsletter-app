@@ -1,20 +1,8 @@
-"use client"
-
-import { useEffect, useState } from "react";
 import { getSortedPostsData } from "@/lib/posts";
 import ListItem from "./ListItem";
-import { BlogPost } from "@/types";
 
 export default function Posts() {
-    const [posts, setPosts] = useState<BlogPost[]>([]);
-
-    useEffect(() => {
-        async function fetchPosts() {
-            const sortedPosts = await getSortedPostsData();
-            setPosts(sortedPosts);
-        }
-        fetchPosts();
-    }, []);
+    const posts = getSortedPostsData();
 
     return (
         <section className="mt-12 mb-12 mx-auto max-w-2xl w-full animate-fadeIn transition duration-200 ease-out">

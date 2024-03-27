@@ -83,7 +83,6 @@ export type BlogPost = {
   title: string;
   date: string;
   author: string;
-  contentHtml: string;
 }
 
 /* export interface Image {
