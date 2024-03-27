@@ -12,6 +12,7 @@
     "@heroicons/react": "^2.1.1",
     "@mailchimp/mailchimp_marketing": "^3.0.80",
     "clsx": "^2.1.0",
+    "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "gsap": "^3.12.5",
     "heroicons": "^2.1.3",
