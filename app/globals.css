@@ -4,10 +4,9 @@
 
 :root {
   --font-quicksand: "Quicksand", sans-serif;
-  /* --font-barlow: "Barlow", serif; */
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: #42424570;
+  --background-end-rgb: #101010;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -20,12 +19,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #03040b;
   font-family: var(--font-quicksand);
 }
 
@@ -53,7 +47,7 @@ a {
 }
 
 a:hover {
-  color: #fff;
+  color: #10b981;
   text-decoration: underline;
 }
 
@@ -67,10 +61,24 @@ h2 {
   .text-balance {
     text-wrap: balance;
   }
-}
 
-.sidebar-logo {
-  @apply flex items-center gap-2 md:py-2;
+  .common-padding {
+    @apply sm:py-16 py-10 sm:px-10 px-5;
+  }
+
+  .screen-max-width {
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    position: relative;
+    max-width: 1120px;
+  }
+
+  .section-heading {
+    @apply bg-white z-10 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-sky-500 to-emerald-500 lg:text-8xl md:text-7xl text-5xl lg:mb-0 mb-5 font-bold translate-y-20;
+  }
+  .sidebar-logo {
+    @apply flex items-center gap-2 md:py-2;
+  }
 }
 
 @layer base {
