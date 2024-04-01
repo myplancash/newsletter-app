@@ -5,8 +5,15 @@
 :root {
   --font-quicksand: "Quicksand", sans-serif;
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: #42424570;
+  --background-start-rgb: #070606;
   --background-end-rgb: #101010;
+}
+
+/* Fallback values */
+:root {
+  --fallback-foreground-rgb: 0, 0, 0;
+  --fallback-background-start-rgb: #070606;
+  --fallback-background-end-rgb: #101010;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -18,9 +25,18 @@
 } */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: #03040b;
+  color: rgb(
+    var(--foreground-rgb, var(--fallback-foreground-rgb))
+  ); /* Using fallback value */
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb, var(--fallback-background-end-rgb)))
+        /* Using fallback value */
+    )
+    rgb(var(--background-start-rgb, var(--fallback-background-start-rgb))); /* Using fallback value */
   font-family: var(--font-quicksand);
+  background: #03040b;
 }
 
 html {
@@ -300,6 +316,12 @@ h2 {
 .prose-dark {
   color: #ffffff; /* Dark mode text color */
 }
+.prose
+  :where(strong):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  color: white;
+  font-weight: 700;
+}
+
 
 @media (min-width: 768px) {
   .container {
