@@ -79,7 +79,7 @@ h2 {
   }
 
   .common-padding {
-    @apply sm:py-16 py-10 sm:px-10 px-5;
+    @apply sm:pb-16 pb-10 sm:px-10 px-5;
   }
 
   .screen-max-width {
@@ -321,7 +321,9 @@ h2 {
   color: white;
   font-weight: 700;
 }
-
+.prose :where(h3):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  color: white;
+}
 
 @media (min-width: 768px) {
   .container {

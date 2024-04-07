@@ -22,6 +22,4 @@ Are you tired of financial stress holding you back from living your dream life? 
 
 **Realizing Your Dreams:** As your savings grow and your investments flourish, you'll start to see your dreams become a reality. Travel the world, pursue your passions, and enjoy the freedom to live life on your own terms.
 
-[Subscribe Now for Financial Freedom!](https://newsletter-1lod4op4c-myplancash.vercel.app)
-
 Ready to take the first step towards financial freedom? Subscribe to our newsletter for exclusive tips and insights on building wealth, paying off debt, and creating multiple income streams. Join our community of like-minded individuals and start your journey to financial independence today!

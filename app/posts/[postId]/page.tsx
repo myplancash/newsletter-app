@@ -2,6 +2,7 @@ import getFormattedDate from "@/lib/getFormattedDate"
 import { getSortedPostsData, getPostData } from "@/lib/posts"
 import { notFound } from "next/navigation"
 import Link from "next/link"
+import NewsletterForm from "@/components/NewsletterForm"
 
 export function generateStaticParams() {
     const posts = getSortedPostsData()
@@ -52,6 +53,7 @@ export default async function Post({ params }: { params: { postId: string } }) {
         <p className="mt-8 prose-p">
             <Link href="/" className="text-blue-500 text-xl hover:underline hover:text-blue-700 hover:text-[#10b981]">← Back to home</Link>
         </p>
+        <NewsletterForm />
     </main>
     )
 }

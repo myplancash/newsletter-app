@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <section className="text-white w-screen overflow-hidden h-full common-padding">
         <div className="screen-max-width">
-          <div className="mb-12 w-full md:flex items-end justify-between">
+          <div className="mb-12 w-full md:flex gap-1 items-end justify-between">
             <h1 id="title" className="section-heading">Join the VIP waitlist now for</h1>
             <h1 id="title" className="section-heading">Exclusive newsletter benefits!</h1>
         </div>
